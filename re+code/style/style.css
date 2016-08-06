@@ -1,0 +1,30 @@
+html {
+  height: 100vh;
+  width: 100vw;
+}
+body,
+.react-app,
+.react-app>div{
+  height: 100%;
+  width: 100%;
+}
+.nav.navbar-nav.navbar-right {
+  color: #ffffff;
+}
+#landing-image {
+  height: 100%;
+  width: 100%;
+  background-image: url('../assets/landing.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.landing-header {
+  font-size: 6em;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  top: 50%;
+  transform: translateY(-50%);
+}
