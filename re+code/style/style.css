@@ -46,6 +46,10 @@
 .home-button-right {
   height: 60px;
 }
+.home-button-left:hover,
+.home-button-right:hover {
+  background-color: #a83636;
+}
 .home-button-left {
   background-color: #de4f4f;
 }
