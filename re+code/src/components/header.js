@@ -20,6 +20,9 @@ class Header extends Component {
           <li>
             <a href="#">Company</a>
           </li>
+          <li>
+            <a href="#">Documentation</a>
+          </li>
         </ul>
       </nav>
     );
