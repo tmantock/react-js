@@ -9,7 +9,8 @@ const app = express();
 const server = http.createServer(app);
 const router = require('./router');
 //DB setup
-mongoose.connect(config.location);
+console.log(config.location);
+mongoose.createConnection(config.location);
 //Middleware
 app.use(morgan('combined'));
 app.use(bodyParser.json({ type: '*/*' }));
