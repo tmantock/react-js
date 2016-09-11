@@ -10,10 +10,11 @@ const server = http.createServer(app);
 const router = require('./router');
 //DB setup
 console.log(config.location);
-mongoose.createConnection(config.location);
+mongoose.connect(config.location);
 //Middleware
 app.use(morgan('combined'));
-app.use(bodyParser.json({ type: '*/*' }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 //Starting the server
