@@ -20,5 +20,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Starting the server
 router(app);
 server.listen(PORT, function(){
-  console.log(`Listening on PORT: 3000`);
-})
+  console.log(`Listening on PORT: ${PORT}`);
+});
