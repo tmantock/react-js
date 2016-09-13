@@ -25,7 +25,7 @@ exports.signup = function (req, res, next) {
           return next(err);
         }
 
-        res.json(user);
+        res.json({ success: true });
       });
   })
 
