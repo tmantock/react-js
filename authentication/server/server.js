@@ -22,6 +22,3 @@ router(app);
 server.listen(PORT, function(){
   console.log(`Listening on PORT: ${PORT}`);
 });
-
-
-//Comment for example
