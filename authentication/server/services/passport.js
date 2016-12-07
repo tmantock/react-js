@@ -7,16 +7,25 @@ const LocalStrategy = require('passport-local');
 
 const localOptions = { usernameField: 'email'};
 const localLogin = new LocalStrategy(localOptions, function (email, password, done) {
+  //Verify email and password, call done with the user if correct credentials
 
-})
+  //Otherwise call done with false
+  User.findOne({ email: email}, function (err, user) {
+    if(err){ return done(err); }
+    if(!user) {return done(null, false); }
+  });
+
+  //compare passwords - is password === user.password
+});
+
 
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromHeader('authorization'),
-  secretForKey: config.secret
+  secretOrKey: config.secret
 };
 
 //Create JWT Strategy
-const jwtLogin = new JwtStrategy(jwtOPtions, function (payload, done) {
+const jwtLogin = new JwtStrategy(jwtOptions, function (payload, done) {
   User.findById(payload.sub, function (err, user) {
     if(err) { return done(err, false); }
 
