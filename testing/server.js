@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 app.get('/', function (req, res, next) {
   res.send({'response': 'Hello Mate!'});
   next();
-})
+});
 
 
 
