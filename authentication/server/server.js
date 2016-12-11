@@ -9,7 +9,6 @@ const app = express();
 const server = http.createServer(app);
 const router = require('./router');
 //DB setup
-console.log(config.location);
 mongoose.connect(config.location);
 //Middleware
 app.use(morgan('combined'));
