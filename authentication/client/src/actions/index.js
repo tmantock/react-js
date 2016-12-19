@@ -27,6 +27,7 @@ export function signUpUser({ email, password}){
             .then(response => {
                 dispatch({ type: AUTH_USER});
                 localStorage.setItem('token', response.data.token);
+                browserHistory.push('/feature');
             })
             .catch(err => {
                 dispatch(authError(err.data.error));
