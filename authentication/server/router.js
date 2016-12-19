@@ -9,7 +9,7 @@ module.exports = function (app) {
   app.get('/', requireAuth, function (req, res) {
     res.send({ 
       success: true,
-      message: "You've reached the secret route"
+      message: "You've reached the secret server route"
      });
   });
 
