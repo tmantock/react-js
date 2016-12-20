@@ -1,5 +1,5 @@
 //mixins
-@mixin banner{
+@mixin banner {
     width: 100%;
     position: relative;
     color: white;
@@ -24,5 +24,13 @@
     span.title {
         font-weight: normal;
         margin-bottom: 30px;
+    }
+}
+
+@mixin clearfix {
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
     }
 }
